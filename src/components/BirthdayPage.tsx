@@ -1,23 +1,38 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import EnvelopePreloader from './EnvelopePreloader';
 import AudioPlayer from './AudioPlayer';
 import HeroSection from './HeroSection';
 import WelcomeSection from './WelcomeSection';
+import PoemSection from './PoemSection';
 import DividerOrnament from './DividerOrnament';
-import CountdownSection from './CountdownSection';
 import CalendarSection from './CalendarSection';
 import MemoriesCarousel from './MemoriesCarousel';
-import UpLoveStorySection from './UpLoveStorySection';
 import ClosingSection from './ClosingSection';
 import FooterSection from './FooterSection';
 
+const GATE_KEY = 'gate_unlocked';
+
 export default function BirthdayPage() {
-  const [envelopeOpened, setEnvelopeOpened] = useState(false);
+  // null = still checking, true = already unlocked, false = needs password
+  const [authState, setAuthState] = useState<null | boolean>(null);
+
+  // Check localStorage on mount (client-only)
+  useEffect(() => {
+    const wasUnlocked = localStorage.getItem(GATE_KEY) === 'true';
+    setAuthState(wasUnlocked);
+  }, []);
+
+  const handleGateOpen = useCallback(() => {
+    localStorage.setItem(GATE_KEY, 'true');
+    setAuthState(true);
+  }, []);
 
   // Setup IntersectionObserver for smooth .fade-up scroll animations
   useEffect(() => {
+    if (!authState) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -38,15 +53,31 @@ export default function BirthdayPage() {
     return () => {
       elements.forEach((el) => observer.unobserve(el));
     };
-  }, [envelopeOpened]);
+  }, [authState]);
+
+  // While checking localStorage, show nothing (prevents flash)
+  if (authState === null) {
+    return (
+      <div
+        style={{
+          position: 'fixed',
+          inset: 0,
+          background: '#0a0612',
+          zIndex: 9999,
+        }}
+      />
+    );
+  }
 
   return (
     <>
-      {/* 1. Interactive Envelope Opening Screen */}
-      <EnvelopePreloader onOpen={() => setEnvelopeOpened(true)} />
+      {/* 1. Password Gate — only rendered if NOT yet authenticated */}
+      {!authState && (
+        <EnvelopePreloader onOpen={handleGateOpen} />
+      )}
 
       {/* 2. Floating Audio Player */}
-      <AudioPlayer autoStart={envelopeOpened} />
+      <AudioPlayer autoStart={authState} />
 
       {/* 3. Main Website Sections */}
       <main>
@@ -56,7 +87,8 @@ export default function BirthdayPage() {
 
         <DividerOrnament />
 
-        <CountdownSection />
+        {/* 4. Dedicated Illuminated Poem Section */}
+        <PoemSection />
 
         <DividerOrnament />
 
@@ -65,10 +97,6 @@ export default function BirthdayPage() {
         <DividerOrnament />
 
         <MemoriesCarousel />
-
-        <DividerOrnament />
-
-        <UpLoveStorySection />
 
         <DividerOrnament />
 

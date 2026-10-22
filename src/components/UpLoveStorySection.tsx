@@ -362,7 +362,7 @@ export default function UpLoveStorySection() {
               {/* Floating UP House & Balloons Watermark Ornament */}
               <div className="up-watermark">
                 <span>🎈</span>
-                <span className="up-watermark-text">Our Adventure Book · Toti</span>
+                <span className="up-watermark-text">Our Adventure Book · سُهيلة & مُـحَـمَّـد</span>
               </div>
 
               {/* Chapter Badge Floating */}
@@ -564,10 +564,10 @@ export default function UpLoveStorySection() {
                 <div className="medal-glow">🎖️</div>
                 <h3 className="reward-title">وسام كارل وإيلي للحب الأبدي</h3>
                 <p className="reward-subtitle arabic-text">
-                  ألف مبروك يا أجمل عروستنا {name}! جمعتي كل بلالين السعادة وفتشتي كل أسرار كتاب مغامراتنا ♡
+                  ألف مبروك يا أجمل خطيبة {name}! جمعتي كل بلالين السعادة وفتشتي كل أسرار كتاب مغامراتنا ♡
                 </p>
                 <div className="reward-quote-box arabic-text">
-                  «شكراً على كل ابتسامة وكل لحظة حلوة عشناها.. من الطفولة لحد ما اتجوزنا، إنتِ أعظم هدية القدر اهداني إياها. كل سنة وأنتِ كل حياتي يا حبيبة قلبي Toti ♡»
+                  «شكراً على كل ابتسامة وكل لحظة حلوة عشناها في هذا العام.. عهدٌ وثيق وقراءة فاتحة جمعت قلبينا، إنتِ أعظم هدية القدر اهداني إياها. عامٌ مضى والعمرُ بكِ يبتسم يا حبيبة قلبي سُهيلة ♡»
                 </div>
                 <div className="reward-badges-row">
                   {chapters.map((chap) => (

@@ -3,9 +3,9 @@ import { BIRTHDAY_CONFIG } from '@/lib/config';
 
 export default function CalendarSection() {
   const weekdays = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
-  
-  // January 2027 starts on Friday (5 leading empty days: Sun, Mon, Tue, Wed, Thu)
-  const emptyDaysBefore = Array.from({ length: 5 });
+
+  // October 2026 starts on Thursday (4 leading empty days: Sun, Mon, Tue, Wed)
+  const emptyDaysBefore = Array.from({ length: 4 });
   const daysInMonth = Array.from({ length: 31 }, (_, i) => i + 1);
 
   return (
@@ -17,6 +17,9 @@ export default function CalendarSection() {
           </span>
           <h2 className="calendar-month">
             {BIRTHDAY_CONFIG.date.month}
+            <span style={{ display: 'block', fontSize: '1rem', color: 'var(--muted)', marginTop: '2px' }}>
+              {BIRTHDAY_CONFIG.date.monthArabic}
+            </span>
           </h2>
           <p className="calendar-year">{BIRTHDAY_CONFIG.date.year}</p>
         </div>
@@ -33,21 +36,21 @@ export default function CalendarSection() {
           ))}
 
           {daysInMonth.map((day) => {
-            const isSpecial = day === 1;
+            const isSpecial = day === 24;
             return (
               <div
                 key={`day-${day}`}
                 className={`cal-day ${isSpecial ? 'special-day' : ''}`}
-                title={isSpecial ? `Happy Birthday ${BIRTHDAY_CONFIG.name}!` : undefined}
+                title={
+                  isSpecial
+                    ? `ذكرى مرور عام على قراءة الفاتحة · 24 أكتوبر 2026`
+                    : undefined
+                }
               >
                 <span>{day}</span>
               </div>
             );
           })}
-        </div>
-
-        <div className="cal-special-badge">
-          <span>♡ Happy Birthday {BIRTHDAY_CONFIG.name} ♡</span>
         </div>
       </div>
     </section>

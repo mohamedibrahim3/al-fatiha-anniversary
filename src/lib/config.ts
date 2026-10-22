@@ -1,77 +1,133 @@
 /**
- * Central configuration for the romantic birthday invitation.
- * Edit this file to customize any text, dates, schedules, or locations.
+ * Central configuration for the 1st Anniversary of Reading Al-Fatiha (قراءة الفاتحة).
+ * Celebrates Sohaila & Hassan (سُهيلة وحَسَن) on October 24, 2026.
  */
 
 export const BIRTHDAY_CONFIG = {
-  /** Name of the birthday person */
-  name: 'Toti',
-
+  /** Bride and Groom Names */
+  name: 'سُـهَـيـلَـة',
+  groomName: 'مُـحَـمَّـد',
+  fatherName: 'عَـلِيّ',
+  familyName: 'الشَّريف',
+coupleDisplay: 'مُـحَـمَّـد ♡ سُـهَـيـلَـة',
   /** Headline titles */
-  eyebrow: 'A Special Celebration of Love & Life',
-  heroTitle: 'Happy Birthday, My Love',
-  heroSubtitle: 'Toti',
+  eyebrow: 'ذكرى قراءة الفاتحة · عامٌ من النور والمودّة',
+  heroTitle: 'عامٌ من النور والمحبة',
+  heroSubtitle: 'مُـحَـمَّـد & سُـهَـيـلَـة',
 
-  /** Target date for countdown (ISO 8601) */
-  targetDate: '2027-01-01T00:00:00',
+  /** Target date for countdown (ISO 8601: October 24, 2026) */
+  targetDate: '2026-10-24T00:00:00',
 
   /** Formatted date parts */
   date: {
-    day: 1,
-    month: 'January',
-    monthArabic: 'يناير',
-    year: 2027,
-    display: '1 · January · 2027',
-    short: '1 January 2027',
+    day: 24,
+    month: 'October',
+    monthArabic: 'أكتوبر',
+    year: 2026,
+    display: '24 · October · 2026',
+    short: '24 أكتوبر 2026',
+    arabicDisplay: 'السبت، 24 أكتوبر 2026',
   },
 
   /** Media assets */
   assets: {
-    heroPoster: '/assets/hero-poster.jpg',
+    heroPoster: '/One-Year Al-Fatiha Celebration.png',
     envelopeBg: '/assets/envelope-bg.jpg',
     musicSrc: '/assets/birthday-music.mp3',
   },
 
+  /** Custom Poem Section (قصيدة ذكرى قراءة الفاتحة) */
+  poem: {
+    tag: 'أبيات الوفاء والمودة',
+    heading: 'بِقراءةِ الفاتحةِ الزهراءِ في المُلتقى',
+    subtitle: 'أبياتٌ شِعرية كُتبت بمداد القلب احتفالاً بمرور عام كامل على قراءة فاتحتنا المباركة',
+    verses: [
+      {
+        shatr1: 'بِقراءةِ الفاتحةِ الزهراءِ في المُلتقى',
+        shatr2: 'مرّت سنةٌ كالنورِ والحبُّ ارتقى',
+      },
+      {
+        shatr1: 'يـا "سُـهَـيـلَـةُ" يا بدراً تراءى لنا',
+        shatr2: 'بـنـورِ جـمـالِـكِ الـقَـلـبُ الـمُـعَـنّـى سَـقَـى',
+      },
+      {
+        shatr1: 'و"حَـسَـنُ" الخصالِ أتاكِ مكرمةً',
+        shatr2: 'فـكُـنـتِ لِـحُـسـنِـهِ طَـيـراً رَوَى وبَـقَـى',
+      },
+      {
+        shatr1: 'مِنْ شَفّةِ المنى "عَـلِيٌّ" أبٌ عظيمُ الهُدى',
+        shatr2: 'وفي سيرةِ الطُّهرِ نلتِ الرِّضا والتقى',
+      },
+      {
+        shatr1: 'و"الشَّريفُ" أصلٌ نبيلٌ زادَكِ شرفاً',
+        shatr2: 'طـوبـى لِـقَـلـبٍ بِـحُـبِّ الـطُّـهـرِ استسقى',
+      },
+      {
+        shatr1: 'عـامٌ مَـضَـى والعمرُ بكِ يبتسمُ',
+        shatr2: 'ودامت عُرى الوصلِ بيننا عهداً وثيقاً نَثقى',
+      },
+    ],
+  },
+
   /** Welcome letter section */
   welcome: {
-    tag: 'With All My Heart',
-    heading: 'To My Everything,<br />Happy Birthday',
+    tag: 'بين قلبي وقلبكِ عهدٌ ومودة',
+    heading: 'إلى خطيبتي وسر سعادتي،<br />سُـهَـيـلَـة',
     arabicHeading: 'إلى من ملكت روحي وقلبي',
     body1:
-      'On this magical night, we gather to celebrate the most radiant light in my life. Every smile of yours brings warmth to my world, and every shared moment is a treasure I cherish deeply.',
+      'في مثل هذا اليوم المبارك، تعاهدنا بقراءة الفاتحة على المحبة والوفاء، وبدأت أجمل وأطهر حكاية في حياتي. عامٌ كامل مرّ كطيف نورٍ، كبرت فيه محبتكِ في وجداني، وتأكدت فيه كل يوم أنكِ أجمل أقدار عمري ونعمة ربي الكبرى.',
     body2:
-      "My love, you are the most beautiful gift life has given me. With you, every day feels like a dream I never want to wake up from. I can't wait to celebrate this special night together.",
-    arabicQuote: 'كل عام وأنتِ لعمري أجمل أعياده، ولروحي نبضها وسر سعادتها ♡',
+      'يا سهيلة، أنتِ السكن والأمان والبهجة التي تضيء دربي. كل لحظة جمعتنا في هذا العام كانت شاهداً على صدق العهد والمودة، وأتمنى من الله أن يديم بيننا الود والسكينة عهداً وثيقاً حتى الأبد.',
   },
 
   /** Countdown section */
   countdown: {
-    tag: 'Counting Every Moment',
-    heading: 'The Countdown',
-    subtitle: 'Until the celebration begins',
+    tag: 'نحتفل بكل ثانية في حكايتنا',
+    heading: 'العد التنازلي ليوم الذكرى',
+    subtitle: 'يوم 24 أكتوبر 2026 · مرور عام على قراءة فاتحتنا المباركة',
   },
 
   /** Memories gallery */
   memories: [
     {
-      src: '/assets/memories/memory-1.jpg',
-      title: 'Golden Sunset Together',
-      caption: 'Walking hand in hand through our favorite memories',
+      src: '/IMG-20251025-WA0426.jpg',
+      title: 'لحظة من أجمل لحظاتنا',
+      caption: 'ذكرى غالية تجمع بين قلوبنا',
     },
     {
-      src: '/assets/memories/memory-2.jpg',
-      title: 'Romantic Candlelit Dinner',
-      caption: 'Surrounded by roses, love, and sweet whispers',
+      src: '/Anime Wedding Moment on a Rose Sofa.png',
+      title: 'على كنبة الورد',
+      caption: 'لحظة حب من خيال الأنيمي تشبه واقعنا',
     },
     {
-      src: '/assets/memories/memory-3.jpg',
-      title: 'Wishes & Celebrations',
-      caption: 'Sparklers, laughter, and a night of endless dreams',
+      src: '/IMG-20251025-WA0266.jpg',
+      title: 'ضحكات ولمّة حلوة',
+      caption: 'أجمل اللحظات هي اللي بنعيشها سوا',
     },
     {
-      src: '/assets/memories/memory-4.jpg',
-      title: 'Gifts from the Heart',
-      caption: 'Every little thing reminds me of how precious you are',
+      src: '/Warm Family Gathering Portrait.png',
+      title: 'لمّة العيلة الدافية',
+      caption: 'دفء الحب والمودة في لحظة عائلية',
+    },
+    {
+      src: '/IMG-20251025-WA0256.jpg',
+      title: 'ابتسامة من القلب',
+      caption: 'كل ابتسامة منكِ كانت وطناً دافئاً لروحي',
+    },
+    {
+      src: '/5120d63b-7168-478d-b980-e2bf2469f345.png',
+      title: 'ذكرى تستحق الاحتفال',
+      caption: 'عامٌ مضى والعمرُ بكِ يبتسم',
+    },
+    {
+      src: '/IMG-20251025-WA0359.jpg',
+      title: 'فرحة وسعادة',
+      caption: 'طوبى لقلبٍ بحب الطهر استسقى',
+    },
+    {
+      src: '/Celebratory Living Room Portrait.png',
+      title: 'احتفال بأجمل ذكرى',
+      caption: 'مرّت سنةٌ كالنورِ والحبُّ ارتقى ♡',
     },
   ],
 
@@ -81,36 +137,36 @@ export const BIRTHDAY_CONFIG = {
       icon: '◈',
       time: '6:30',
       period: 'PM',
-      title: 'Candlelight Welcome',
-      desc: 'Arrival of guests & welcome drinks amidst starlight and roses',
+      title: 'استقبال الذكرى بأضواء الشموع',
+      desc: 'لحظات هادئة على أضواء الشموع وألحان الكمان الرومانسية',
     },
     {
       icon: '✦',
       time: '8:00',
       period: 'PM',
-      title: 'Grand Birthday Entrance & Cake Cutting',
-      desc: 'Lighting the candles, making wishes, and the birthday toast',
+      title: 'تجديد العهد وتقطيع الكيك',
+      desc: 'الاحتفال بمرور 365 يوماً على قراءة الفاتحة وعهد الحب المستمر',
     },
     {
       icon: '◈',
       time: '9:30',
       period: 'PM',
-      title: 'Romantic Dinner & Music',
-      desc: 'An exquisite dining experience accompanied by gentle violin tunes',
+      title: 'عشاء رومانسي وموسيقى ساحرة',
+      desc: 'جلسة خاصة وتناول العشاء مع استرجاع أجمل ذكريات العام الماضي',
     },
     {
       icon: '✦',
       time: '11:00',
       period: 'PM',
-      title: 'Starlight Wishes & Dance',
-      desc: 'Dancing under the stars, fireworks, and cherished memories',
+      title: 'أمنيات تحت أضواء النجوم',
+      desc: 'دعوات مباركة بأن يديم الله بيننا المودة حتى تمام الفرحة الكبرى',
     },
   ],
 
   /** Venue Details */
   venue: {
-    tag: 'Where Love Gathers',
-    heading: 'The Venue',
+    tag: 'حيث يلتقي الحب والوفاء',
+    heading: 'مكان الاحتفال',
     name: 'The Rosewood Villa & Gardens',
     address: 'Private Sunset Estate, Cairo - Alexandria Desert Road',
     city: 'Cairo, Egypt',
@@ -121,104 +177,103 @@ export const BIRTHDAY_CONFIG = {
   /** Guidelines */
   guidelines: [
     {
-      tag: 'Formal Attire',
+      tag: 'أزياء الاحتفال',
       title: 'Dress Code',
       body:
-        'Ladies are warmly invited to wear elegant evening dresses in soft pink, blush, or champagne tones. Gentlemen are requested to wear formal dark suits.',
+        'نحتفل بذكرى قراءة الفاتحة في أجواء راقية مليئة بالحب والأناقة الوردية والذهبية.',
       arabicNote: [
-        'نتمنى من الجميع الحضور بأزياء رسمية أنيقة تليق بالليلة المميزة',
+        'نتمنى من الجميع الحضور بأزياء رسمية أنيقة تليق بالليلة المباركة',
         'للسيدات: فساتين راقية بدرجات الوردي أو البيج الذهبي',
         'للرجال: بدلات رسمية أنيقة',
       ],
     },
     {
-      tag: 'Special Note',
-      title: 'Gifts & Wishes',
+      tag: 'دعوات وأمنيات',
+      title: 'دعواتكم الصادقة',
       body:
-        'Your presence, warm laughter, and loving wishes are the most precious gifts of all to celebrate this milestone together.',
+        'حضوركم ودعواتكم الطيبة بالبركة ودوام الألفة والمودة هي أغلى الهدايا لقلوبنا.',
       arabicNote: [
-        'حضوركم الغالي وابتسامتكم الصادقة هي أجمل هدية لقلوبنا',
-        'نتطلع لقضاء ليلة استثنائية لا تُنسى بصحبتكم',
+        'دعواتكم القلبية المباركة سر سعادتنا وتمام فرحتنا',
+        'عام مضى وعمر قادم يجمعنا بالخير والوفاء إن شاء الله',
       ],
     },
   ],
 
   /** Closing quote */
   closing: {
-    quote: '"You are my today and all of my tomorrows. Happy Birthday, my love."',
-    arabicQuote: '«أنتِ حكاية عمري وأجمل أقداره.. كل عام وأنتِ بقلبي»',
+    quote: '"عامٌ مضى والعمرُ بكِ يبتسمُ.. ودامت عُرى الوصلِ بيننا عهداً وثيقاً نَثقى."',
+    arabicQuote: '«بِقراءةِ الفاتحةِ الزهراءِ في المُلتقى.. مرّت سنةٌ كالنورِ والحبُّ ارتقى ♡»',
   },
 
   /** UP-inspired Love Story & Game */
   upLoveStory: {
     tag: '🎈 Our Adventure Book · كتاب مغامراتنا',
     heading: 'From Childhood Dreams to Forever Together',
-    subtitle: 'حكايتنا المستوحاة من كرتون UP · من أول حلم لحد ما اتجوزنا',
+    subtitle: 'حكايتنا المستوحاة من كرتون UP · من أول وعد وقراءة فاتحة لحد ما نكمل العمر سوا',
     description:
-      '«زي حكاية كارل وإيلي.. رحلتنا بدأت ببلالين وأحلام بريئة، وكبرت في قلوبنا يوم ورا يوم، لحد ما بقت أجمل حقيقة في عمري: عروستي وحبيبتي Toti ♡»',
+      '«زي حكاية كارل وإيلي.. رحلتنا بدأت بوعد طاهر وبلالين وأحلام بريئة، وقراءة الفاتحة اللي جمعت بين قلوبنا، لحد ما كملنا سنة من الحب وبنرسم سوا بيت أحلامنا: سُهيلة ومُـحَـمَّـد ♡»',
     chapters: [
       {
         id: 1,
         title: 'The First Spark',
         arabicTitle: 'شرارة البداية وبداية الحلم',
-        period: 'Childhood & Big Dreams · مرحلة الطفولة',
-        badge: '🎈 شارة المغامر الأول',
+        period: 'First Glance & Big Dreams · بداية التعارف',
+        badge: '🎈 شارة البداية الطاهرة',
         image: '/assets/story/scene-1.jpg',
         quote:
-          '«في بيت الشجرة الصغير بدأت الحكاية.. شوية بلالين طايرة في السما، وكتاب مغامرات، ووعد طفولي إننا نفضل سوا للأبد.»',
+          '«في هدوء البدايات، بدأت أحلى حكاية.. نظرة صادقة وأمنية نقية في القلب، وإحساس جميل إن الأيام الجاية مخبية سر السعادة.»',
         englishQuote:
-          'In our little clubhouse, our adventure began with colorful balloons, a handmade scrapbook, and big dreams.',
+          'In the quiet moments of the beginning, an honest dream sparked in our hearts.',
       },
       {
         id: 2,
-        title: 'Dreaming on the Hill',
-        arabicTitle: 'قلوب في السما وأحلام بتكبر',
-        period: 'Youth & Golden Sunsets · أحلام الشباب',
-        badge: '☁️ شارة غيوم القلوب',
+        title: 'Love Blossoming',
+        arabicTitle: 'قلوب تتلاقى وأحلام تكبر',
+        period: 'Growing Love & Affection · تلاقي الأرواح',
+        badge: '☁️ شارة المودة والرحمة',
         image: '/assets/story/scene-2.jpg',
         quote:
-          '«كبرنا وكبر حبنا معانا.. قعدنا على تلة الأحلام نرسم في السحاب قلوب طايرة، وكل غيمة كانت شايلة أمنية إني أشوفك بالفستان الأبيض.»',
+          '«كبرت المودة يوم ورا يوم.. تلاقت الأرواح في نقاء، وكل يوم كان بيأكد إن "سُهيلة" هي البدر اللي نوّر دنيتي وسر ابتسامتي.»',
         englishQuote:
-          'As we grew, our love bloomed like wildflowers. We watched heart-shaped clouds drift across the golden sky.',
+          'Day by day, our affection blossomed like spring flowers in the sunlight.',
       },
       {
         id: 3,
-        title: 'Building Our Paradise',
-        arabicTitle: 'بنبني بيتنا وبرطمان الجنة',
-        period: 'Promises & Building Together · خطوة بخطوة',
-        badge: '🏡 شارة بيت الأحلام',
+        title: 'Reading Al-Fatiha',
+        arabicTitle: 'قراءة الفاتحة والعهد المقدس (24 أكتوبر)',
+        period: '24 October · يوم قراءة الفاتحة المبارك',
+        badge: '📖 شارة الفاتحة والعهد',
         image: '/assets/story/scene-3.jpg',
         quote:
-          '«بأيدينا حطينا طوبة فوق طوبة.. برطمان تحويشة الجنة وكل تفصيلة بنرسمها سوا، بنسجل كل ضحكة في كتاب مغامراتنا.»',
+          '«يوم 24 أكتوبر.. وضعنا أيدينا في أيدي بعض وتلونا الفاتحة عهداً وثيقاً على المودة والرحمة، وبدأت رسمياً حكايتنا النورانية.»',
         englishQuote:
-          'Hand in hand, painting our dream home. Every coin in our Paradise Fund was a step toward our forever.',
+          'On 24 October, our hands joined and Al-Fatiha was recited — a sacred promise for eternity.',
       },
       {
         id: 4,
-        title: 'Our Happily Ever After',
-        arabicTitle: 'حلم العمر حقيقة · ليلة العمر وفرحتنا',
-        period: 'Now & Forever · فرحة العمر',
-        badge: '💍 شارة حب للأبد',
+        title: 'One Year of Light',
+        arabicTitle: 'مرّت سنةٌ كالنورِ والحبُّ ارتقى',
+        period: '1st Anniversary · عامٌ كامل من الوفاء',
+        badge: '💍 شارة عام من النور',
         image: '/assets/story/scene-4.jpg',
         quote:
-          '«والنهاردة.. البلالين والأحلام كلها بقت حقيقة! ليلة العمر وقمرها اللي نوّر دنيتي. كل سنة وأنتِ أجمل مغامرة وسر سعادتي يا Toti ♡»',
+          '«والنهاردة كملنا سنة كاملة من الحب والسكينة! عـامٌ مَـضَـى والعمرُ بكِ يبتسمُ، وخطوة بخطوة مكملين لحد ما نوصل لبيت أحلامنا يا سُهيلة ♡»',
         englishQuote:
-          'And today, all our dreams became our breathtaking reality. Under the stars, my forever bride, happy birthday my love!',
+          'Today marks one year of radiant love and laughter. Hand in hand towards our forever home!',
       },
     ],
   },
 
   /** Footer details */
   footer: {
-    brand: 'ذِكــرى',
-    brandSubtitle: 'Crafted with Love for Toti',
-    year: '2027',
+    brandSubtitle: 'ذكرى مرور عام على قراءة الفاتحة · 24 أكتوبر 2026',
+    year: '2026',
   },
 
   /** Meta / SEO */
   meta: {
-    title: 'Happy Birthday, My Love — January 1, 2027',
-    description: 'An exclusive and romantic birthday celebration invitation for Toti on January 1, 2027.',
-    ogImage: '/assets/hero-poster.jpg',
+    title: 'ذكرى مرور عام على قراءة الفاتحة — سُهيلة وحَسَن · 24 أكتوبر 2026',
+    description: 'احتفال خاص بذكرى مرور عام على قراءة الفاتحة والعهد المقدس بين سُهيلة وحَسَن في 24 أكتوبر 2026.',
+    ogImage: '/assets/anniversary-hero.jpg',
   },
 } as const;

@@ -20,12 +20,6 @@ export default function WelcomeSection() {
           {BIRTHDAY_CONFIG.welcome.body2}
           <span className="welcome-highlight-name">{BIRTHDAY_CONFIG.name}</span>
         </p>
-
-        <div className="arabic-quote-card">
-          <p className="arabic-quote-text">
-            {BIRTHDAY_CONFIG.welcome.arabicQuote}
-          </p>
-        </div>
       </div>
     </section>
   );

@@ -18,21 +18,21 @@ export default function FooterSection() {
     <footer className="site-footer fade-up">
       <div className="footer-inner">
         <div className="closing-names">
-          Happy Birthday, {BIRTHDAY_CONFIG.name}
+          {BIRTHDAY_CONFIG.coupleDisplay}
         </div>
+        <p className="closing-anniversary-subtitle">
+          ذكرى مرور عام على قراءة الفاتحة المباركة
+        </p>
         <p className="closing-date">{BIRTHDAY_CONFIG.date.short}</p>
 
-        <p className="footer-brand">
-          Crafted with endless love · <span>{BIRTHDAY_CONFIG.footer.brand}</span>
-        </p>
 
         <div className="footer-socials">
           <button
             type="button"
             className="footer-btn-icon"
             onClick={handleShare}
-            aria-label="Share Invitation"
-            title="Share Invitation"
+            aria-label="مشاركة الرابط"
+            title="مشاركة الرابط"
           >
             <svg
               width="18"
@@ -58,11 +58,11 @@ export default function FooterSection() {
             style={{
               marginTop: '1rem',
               color: 'var(--gold-light)',
-              fontSize: '0.85rem',
-              animation: 'fadeIn 0.3s ease',
+              fontSize: '0.88rem',
+              letterSpacing: '0.04em',
             }}
           >
-            ✓ Link copied to clipboard!
+            ✓ تم نسخ رابط الصفحة للمشاركة
           </p>
         )}
       </div>

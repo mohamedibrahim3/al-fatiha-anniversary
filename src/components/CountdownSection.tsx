@@ -61,7 +61,7 @@ export default function CountdownSection() {
             <span className="cd-num" id="cd-days">
               {formatNumber(timeLeft.days)}
             </span>
-            <em className="cd-label">Days</em>
+            <em className="cd-label">أيام · Days</em>
           </div>
 
           <div className="cd-sep">:</div>
@@ -70,7 +70,7 @@ export default function CountdownSection() {
             <span className="cd-num" id="cd-hours">
               {formatNumber(timeLeft.hours)}
             </span>
-            <em className="cd-label">Hours</em>
+            <em className="cd-label">ساعات · Hours</em>
           </div>
 
           <div className="cd-sep">:</div>
@@ -79,7 +79,7 @@ export default function CountdownSection() {
             <span className="cd-num" id="cd-min">
               {formatNumber(timeLeft.minutes)}
             </span>
-            <em className="cd-label">Minutes</em>
+            <em className="cd-label">دقائق · Minutes</em>
           </div>
 
           <div className="cd-sep">:</div>
@@ -88,7 +88,7 @@ export default function CountdownSection() {
             <span className="cd-num" id="cd-sec">
               {formatNumber(timeLeft.seconds)}
             </span>
-            <em className="cd-label">Seconds</em>
+            <em className="cd-label">ثوانٍ · Seconds</em>
           </div>
         </div>
       </div>
