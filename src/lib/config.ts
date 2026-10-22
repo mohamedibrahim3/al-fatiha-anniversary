@@ -1,6 +1,6 @@
 /**
  * Central configuration for the 1st Anniversary of Reading Al-Fatiha (قراءة الفاتحة).
- * Celebrates Sohaila & Hassan (سُهيلة وحَسَن) on October 24, 2026.
+ * Celebrates Sohaila & Hassan (سُهيلة وحَسَن) on 24 أكتوبر 2026.
  */
 
 export const BIRTHDAY_CONFIG = {
@@ -9,13 +9,13 @@ export const BIRTHDAY_CONFIG = {
   groomName: 'مُـحَـمَّـد',
   fatherName: 'عَـلِيّ',
   familyName: 'الشَّريف',
-coupleDisplay: 'مُـحَـمَّـد ♡ سُـهَـيـلَـة',
+  coupleDisplay: 'مُـحَـمَّـد ♡ سُـهَـيـلَـة',
   /** Headline titles */
   eyebrow: 'ذكرى قراءة الفاتحة · عامٌ من النور والمودّة',
   heroTitle: 'عامٌ من النور والمحبة',
   heroSubtitle: 'مُـحَـمَّـد & سُـهَـيـلَـة',
 
-  /** Target date for countdown (ISO 8601: October 24, 2026) */
+  /** Target date for countdown (ISO 8601: 24 أكتوبر 2026) */
   targetDate: '2026-10-24T00:00:00',
 
   /** Formatted date parts */

@@ -81,21 +81,38 @@ export default function MemoriesCarousel() {
             className="carousel-track"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
-            {memories.map((memory, index) => (
-              <div key={index} className="carousel-slide">
-                <Image
-                  src={memory.src}
-                  alt={memory.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 680px"
-                  style={{ objectFit: 'cover' }}
-                />
-                <div className="carousel-caption-bar">
-                  <h3 className="carousel-caption-title">{memory.title}</h3>
-                  <p className="carousel-caption-text">{memory.caption}</p>
+            {memories.map((memory, index) => {
+              const isCelebratory = memory.src.includes('Celebratory Living Room Portrait');
+              return (
+                <div
+                  key={index}
+                  className="carousel-slide"
+                  style={isCelebratory ? { paddingTop: '4px' } : undefined}
+                >
+                  <Image
+                    src={memory.src}
+                    alt={memory.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 680px"
+                    style={{
+                      objectFit: 'cover',
+                      ...(isCelebratory
+                        ? {
+                          paddingTop: '4px',
+                          top: '1px',
+                          transform: 'translateY(4px)',
+                          objectPosition: 'center 20%',
+                        }
+                        : {}),
+                    }}
+                  />
+                  <div className="carousel-caption-bar">
+                    <h3 className="carousel-caption-title">{memory.title}</h3>
+                    <p className="carousel-caption-text">{memory.caption}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <button
